@@ -9,15 +9,11 @@ while True:
 		break
 count = {'lists': 0, 'tuples': 0, 'strings': 0, 'others': 0}
 for i in data:
-	if type(i) == type('hi'):
-		count['strings'] += 1
-	elif type(i) == type((1,)):
-		count['tuples'] += 1
-	if type(data[i]) == type([1, 2]):
+	if type(data[i]) == list:
 		count['lists'] += 1
-	elif type(data[i]) == type((1,)):
+	elif type(data[i]) == tuple:
 		count['tuples'] += 1
-	elif type(data[i]) == type('hi'):
+	elif type(data[i]) == str:
 		count['strings'] += 1
 	else:
 		count['others'] += 1

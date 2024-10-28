@@ -17,8 +17,8 @@ while True:
 			if phone[i] == int(norp):
 				print("Name of that person is: ", i)
 				break
-			else:
-				print("Name/Phone No. not found")
+		else:
+			print("Name/Phone No. not found")
 	elif norp in phone:
 		print("The phone no. of that person is: ", phone[norp])
 	else:
