@@ -11,7 +11,7 @@ while True:
         avg1 += m
     avg1 = avg1/3
     avg += ((name, avg1),)
-    stud += (name,) + marks
+    stud += (((name,) + marks),)
     enter = input("Type 'terminate' to terminate giving inputs: ")
     if enter == 'terminate':
         break
@@ -27,6 +27,6 @@ for i in avg:
     if mi[1] > i[1]:
         mi = i
 print("Lowest avg student is " + mi[0] + " With an average of " + str(mi[1]) + " as his marks are ", end='')
-print(stud[avg.index(mi)])
+print(stud[avg.index(mi)][1:])
 print("Highest avg student is " + m[0] + " With an average of " + str(m[1]) + " as his marks are ", end='')
-print(stud[avg.index(m)])
+print(stud[avg.index(m)][1:])
